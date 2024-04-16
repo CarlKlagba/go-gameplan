@@ -1,0 +1,12 @@
+{{define "reaction"}}
+<li>
+    *** {{.Name}}
+
+    {{if .Action}}
+    <ul>
+        {{ template "action" .Action}}
+    </ul>
+    {{else}}
+    {{end}}
+<li>
+{{end}}

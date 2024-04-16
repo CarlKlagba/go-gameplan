@@ -1,0 +1,17 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.5" integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO" crossorigin="anonymous"></script>
+    <title>Hello, World!</title>
+</head>
+<body>
+<p>Hello, World!</p>
+<button hx-get="/gameplans" hx-target="#data-container" hx-swap="innerHTML">Get Game Plan</button>
+
+<div id="data-container"></div>
+</body>
+</html>
+{{end}}

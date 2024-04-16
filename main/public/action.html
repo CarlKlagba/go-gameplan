@@ -1,0 +1,22 @@
+{{define "action"}}
+<li>
+    {{.Name}}
+    <button hx-post="/action/reaction"
+            hx-trigger="click"
+            hx-target="#reaction-{{ .Id }}"
+            hx-swap="beforeend">
+        Submit
+    </button>
+    {{if .Reactions }}
+    <ul id="reaction-{{ .Id }}">
+        {{range .Reactions}}
+        {{ template "reaction" .}}
+        {{end}}
+    </ul>
+    {{else}}
+    <ul id="reaction-{{ .Id }}">
+
+    </ul>
+    {{end}}
+</li>
+{{end}}
